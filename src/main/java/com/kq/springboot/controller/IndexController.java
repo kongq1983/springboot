@@ -15,6 +15,7 @@ public class IndexController {
 	@RequestMapping(value="/r")
 	public DtoResult register(HttpServletRequest request) {
 		DtoResult result = new DtoResult();
+		result.setResult(1);
 		System.out.println("IndexController register...");
 
 		request.getSession(true).setAttribute("login","true");
