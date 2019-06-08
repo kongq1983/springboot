@@ -10,6 +10,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+				sh 'mvn help:effective-settings'
+				echo '-----------------------------------------------------------------'
+				sh 'mvn help:system'
+				echo '-----------------------------------------------------------------'
                 sh 'mvn -X -B -DskipTests clean package'
             }
         }
