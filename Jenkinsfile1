@@ -25,6 +25,7 @@ pipeline {
             steps {
                // dir("/root/.m2/workspace")
                 sh 'pwd'
+                sh 'chmod u+x script/*.sh'
                 sh './script/start.sh'
             }
         }
