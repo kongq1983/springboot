@@ -23,6 +23,8 @@ pipeline {
         // stage('Dev-Run') {
         stage('Deliver') {
             steps {
+               // dir("/root/.m2/workspace")
+                sh 'pwd'
                 sh './script/start.sh'
             }
         }
