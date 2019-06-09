@@ -5,7 +5,8 @@ pipeline {
         stage('Build') {
             steps {
 				sh 'whoami'
-                sh 'mvn -X -B -DskipTests clean package'
+                // sh 'mvn -X -B -DskipTests clean package'
+                sh 'mvn -B -DskipTests clean package'
             }
         }
         stage('Test') {
