@@ -5,7 +5,10 @@ JAVA_PATH=/usr/local/jdk1.8.0_172/bin
 # LOCAL_JAR_PATH=/root/.jenkins/workspace/springboot/target
 # jenkins root path ： /root/.jenkins/workspace/pipeline-springboot
 LOCAL_JAR_PATH=target
+START_LOG_PATH=/tmp/startlog
 APPNAME=${NAME}-${VERSION}
+
+mkdir -p ${START_LOG_PATH}
 
 
 echo 'appname='${APPNAME}
@@ -22,6 +25,6 @@ then
         echo 'kill process result :'$?;
 fi
 echo " nohup ${JAVA_PATH}/java -jar ${LOCAL_JAR_PATH}/${APPNAME}.jar & "
-nohup ${JAVA_PATH}/java -jar ${LOCAL_JAR_PATH}/${APPNAME}.jar &
+nohup ${JAVA_PATH}/java -jar ${LOCAL_JAR_PATH}/${APPNAME}.jar > ${START_LOG_PATH}/start.log 2>&1 &
 # nohup ${JAVA_PATH}/java -jar ${LOCAL_JAR_PATH}/${APPNAME}.jar > /dev/null 2>&1 &
 echo "pid=$!";
