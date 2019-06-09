@@ -26,7 +26,8 @@ pipeline {
                // dir("/root/.m2/workspace")
                 sh 'pwd'
                 sh 'chmod u+x script/*.sh'
-                sh './script/start.sh'
+                // sh './script/start.sh'
+                sh 'JENKINS_NODE_COOKIE=dontKillMe ./script/start.sh'
             }
         }
     }
