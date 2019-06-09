@@ -20,7 +20,8 @@ pipeline {
             }
         }
 
-        stage('Dev-Run') {
+        // stage('Dev-Run') {
+        stage('Deliver') {
             steps {
                 sh './script/start.sh'
             }
