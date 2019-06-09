@@ -3,7 +3,8 @@ NAME=springboot
 VERSION=1.0
 JAVA_PATH=/usr/local/jdk1.8.0_172/bin
 # LOCAL_JAR_PATH=/root/.jenkins/workspace/springboot/target
-LOCAL_JAR_PATH=../target
+# jenkins root path ： /root/.jenkins/workspace/pipeline-springboot
+LOCAL_JAR_PATH=target
 APPNAME=${NAME}-${VERSION}
 
 
