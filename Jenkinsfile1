@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+				sh 'whoami'
                 sh 'mvn -X -B -DskipTests clean package'
             }
         }
@@ -22,7 +23,7 @@ pipeline {
 	post {
         always {
             echo 'clean up springboot workspace'
-            deleteDir() /* clean up our workspace */
+            // deleteDir() /* clean up our workspace */
         }
         
     }
