@@ -18,6 +18,12 @@ pipeline {
                 }
             }
         }
+
+        stage('Dev-Run') {
+            steps {
+                sh './script/start.sh'
+            }
+        }
     }
 	
 	post {
