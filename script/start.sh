@@ -20,5 +20,7 @@ then
         ps -ef | grep ${APPNAME}  | grep -v grep | awk '{print $2}'  | xargs kill -9;
         echo 'kill process result :'$?;
 fi
-nohup ${JAVA_PATH}/java -jar ${LOCAL_JAR_PATH}/${APPNAME}.jar > /dev/null 2>&1 &
-echo 'process start result : '$?;
+echo " nohup ${JAVA_PATH}/java -jar ${LOCAL_JAR_PATH}/${APPNAME}.jar & "
+nohup ${JAVA_PATH}/java -jar ${LOCAL_JAR_PATH}/${APPNAME}.jar &
+# nohup ${JAVA_PATH}/java -jar ${LOCAL_JAR_PATH}/${APPNAME}.jar > /dev/null 2>&1 &
+echo "pid=$!";
