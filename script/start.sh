@@ -24,7 +24,7 @@ then
         ps -ef | grep ${APPNAME}  | grep -v grep | awk '{print $2}'  | xargs kill -9;
         echo 'kill process result :'$?;
 fi
-echo " nohup ${JAVA_PATH}/java -jar ${LOCAL_JAR_PATH}/${APPNAME}.jar & "
-nohup ${JAVA_PATH}/java -jar ${LOCAL_JAR_PATH}/${APPNAME}.jar > ${START_LOG_PATH}/start.log 2>&1 &
+echo " nohup java -jar ${LOCAL_JAR_PATH}/${APPNAME}.jar & "
+nohup java -jar ${LOCAL_JAR_PATH}/${APPNAME}.jar > ${START_LOG_PATH}/start.log 2>&1 &
 # nohup ${JAVA_PATH}/java -jar ${LOCAL_JAR_PATH}/${APPNAME}.jar > /dev/null 2>&1 &
 echo "pid=$!";
