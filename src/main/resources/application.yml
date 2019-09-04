@@ -1,4 +1,4 @@
 server:
   port: 8100
-  context-path: /blog
+  context-path: /springboot
   
