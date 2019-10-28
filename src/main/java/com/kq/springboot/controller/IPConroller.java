@@ -24,7 +24,7 @@ public class IPConroller {
         try{
             String localIp = NetworkInterfaceUtil.getLocalIp();
             result.setResult(localIp);
-            result.setCode("16800000");
+            result.setCode("18800000");
         }catch (Exception e) {
             result.setResult("获取IP失败!");
             result.setCode("16800001");
