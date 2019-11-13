@@ -1,4 +1,13 @@
 server:
   port: 8100
   context-path: /springboot
-  
+
+
+# 先从环境变量取  ZOOKEEPER_SERVER
+
+zookeeper:
+  server: 192.168.3.168
+
+my:
+  zookeeper:
+    server: ${ZOOKEEPER_SERVER:${zookeeper.server}}
