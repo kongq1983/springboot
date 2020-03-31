@@ -7,6 +7,7 @@
     <version>1.0</version>
     <modules>
         <module>database</module>
+        <module>redisson</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -24,6 +25,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <redisson.spring.boot.starter.version>3.12.2</redisson.spring.boot.starter.version>
     </properties>
 
     <dependencies>
